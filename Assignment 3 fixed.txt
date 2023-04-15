@@ -1,0 +1,10 @@
+$ sed '/Zoo/d' pandas.txt >> output_No_Zoo.txt
+$ grep 'male' pandas.txt | sort -k2 | awk '{print $1, $4, $2}' >> output_Sort_Sex.txt 
+$ grep -vi "Base" pandas.txt | sort -k5 >> pandas_zoo_reserve.txt
+$ sed 's/female/F/' pandas.txt | sed 's/male/M/' >> output_pandas_f_m.txt
+$ grep -c "female.*October" pandas.txt
+$ grep -n . pandas.txt  > new_pandas.txt
+$ sed -n "1p;6p;17p" pandas.txt >> output_print.txt
+$ grep -i x pandas.txt >> output_x.txt
+$ awk '{print $5}' pandas.txt | sort | uniq >> pandas_uniq_loc.txt   
+$ sort -k 4n pandas.txt | awk '$4 <= 10'| awk '{print $1,$4,$2,$3,$5}' >> pandas_10.txt
